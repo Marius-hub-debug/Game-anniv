@@ -71,7 +71,7 @@ li.me{background:linear-gradient(90deg,rgba(255,77,141,.28),transparent)}li .n{f
 const $=s=>document.querySelector(s),T=(f,d)=>{try{return f()}catch(e){return d}};
 const ls={get:k=>T(()=>localStorage.getItem(k),null),set:(k,v)=>T(()=>localStorage.setItem(k,v))};
 /* >>> Renseigne ces 2 valeurs (Supabase → Project Settings → API) <<< */
-const SUPABASE_URL="",SUPABASE_KEY="";let LIVE=null;
+const SUPABASE_URL="https://zsoqobkxoqqtuyhsfdpg.supabase.co",SUPABASE_KEY="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpzb3FvYmt4b3FxdHV5aHNmZHBnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTU1MzY3OTksImV4cCI6MjExMTExMjc5OX0.Bcr_n2yg7EMNuYajJTw4ZPOquEYLv-yXd-YGfgvRCw8";let LIVE=null;
 const ARENA_MIN=30,EMB_SEC=180,PTS={w:3,l:-1,d:1},clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const mk=(el,w,h)=>{const c=document.createElement("canvas");c.width=w;c.height=h;c.className="cv";el.append(c);return c};
 const keysFor=map=>{const h=e=>{const f=map[e.key];if(f){f(e.type=="keydown");e.preventDefault()}};document.addEventListener("keydown",h);document.addEventListener("keyup",h);return()=>{document.removeEventListener("keydown",h);document.removeEventListener("keyup",h)}};
